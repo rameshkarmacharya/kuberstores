@@ -137,6 +137,27 @@ main {
   margin: 2rem 0;
 }
 
+/* Featured Products Section */
+.featured-products {
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.featured-products__heading {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.featured-products__description {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 2rem;
+  transition: color 0.3s ease;
+}
+
 .product-card {
   background: white;
   border-radius: 8px;
