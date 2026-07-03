@@ -1,0 +1,26 @@
+{
+  "general": {
+    "404": {
+      "title": "Page not found",
+      "subtext": "The page you requested does not exist"
+    },
+    "meta": {
+      "tags": "Tagged with"
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "create_account": "Create account"
+    },
+    "404_page": "404 Page"
+  },
+  "product": {
+    "product": "Product",
+    "price_range_html": "From {{ low }} to {{ high }}",
+    "sold_out": "Sold out",
+    "unavailable": "Unavailable",
+    "on_sale": "Sale",
+    "title": "Title",
+    "description": "Description",
+    "reviews": "Reviews"
+  }
+}

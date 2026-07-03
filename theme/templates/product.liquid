@@ -1,0 +1,29 @@
+<div class="product-container">
+  <h1>{{ product.title }}</h1>
+  
+  <div class="product-image">
+    {% if product.featured_image %}
+      <img src="{{ product.featured_image | image_url: width: 500 }}" alt="{{ product.title }}">
+    {% endif %}
+  </div>
+
+  <div class="product-details">
+    <p class="price">
+      {% if product.available %}
+        <span class="price-amount">{{ product.price | money }}</span>
+      {% else %}
+        <span class="sold-out">{{ 'product.sold_out' | t }}</span>
+      {% endif %}
+    </p>
+
+    <p class="description">{{ product.description }}</p>
+
+    {% if product.available %}
+      <form method="post" action="/cart/add" class="product-form">
+        <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+        <input type="number" name="quantity" value="1" min="1">
+        <button type="submit" class="btn btn-primary">Add to Cart</button>
+      </form>
+    {% endif %}
+  </div>
+</div>

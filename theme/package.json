@@ -1,0 +1,21 @@
+{
+  "name": "kuberstores-theme",
+  "version": "1.0.0",
+  "description": "A modern, responsive Shopify theme for KuberStores",
+  "main": "index.js",
+  "scripts": {
+    "start": "shopify theme dev",
+    "build": "npm run lint",
+    "lint": "echo 'Lint task - add linting tools as needed'",
+    "test": "echo 'Test task - add test framework as needed'"
+  },
+  "keywords": [
+    "shopify",
+    "theme",
+    "ecommerce",
+    "kuberstores"
+  ],
+  "author": "KuberStores",
+  "license": "Proprietary",
+  "devDependencies": {}
+}

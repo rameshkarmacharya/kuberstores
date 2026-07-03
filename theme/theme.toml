@@ -1,0 +1,12 @@
+name = "KuberStores Theme"
+description = "A modern, responsive Shopify theme for KuberStores"
+version = "1.0.0"
+
+# Theme author information
+[author]
+name = "KuberStores"
+email = "dev@kuberstores.com"
+
+# Supported features
+[theme]
+color_schemes = 5
