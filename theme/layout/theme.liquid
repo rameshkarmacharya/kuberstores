@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page_title }}</title>
+  <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
+  {% if page_description %}
+    <meta name="description" content="{{ page_description | escape }}">
+  {% endif %}
+</head>
+<body class="template-{{ template | handle }}">
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="/">{{ shop.name }}</a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/collections">Shop</a></li>
+          <li><a href="/pages/about">About</a></li>
+          <li><a href="/pages/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    {{ content_for_layout }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; {{ "now" | date: "%Y" }} {{ shop.name }}. All rights reserved.</p>
+      <ul class="social-links">
+        {% if settings.social_facebook %}
+          <li><a href="{{ settings.social_facebook }}">Facebook</a></li>
+        {% endif %}
+        {% if settings.social_twitter %}
+          <li><a href="{{ settings.social_twitter }}">Twitter</a></li>
+        {% endif %}
+        {% if settings.social_instagram %}
+          <li><a href="{{ settings.social_instagram }}">Instagram</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </footer>
+
+  <script src="{{ 'theme.js' | asset_url }}"></script>
+</body>
+</html>

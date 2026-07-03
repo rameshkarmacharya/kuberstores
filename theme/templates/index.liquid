@@ -1,0 +1,26 @@
+<div class="home-container">
+  <section class="hero">
+    <h1>Welcome to {{ shop.name }}</h1>
+    <p>Discover our amazing products</p>
+    <a href="/collections" class="btn btn-primary">Shop Now</a>
+  </section>
+
+  <section class="featured-products">
+    <h2>Featured Products</h2>
+    <div class="products-grid">
+      {% for product in collections.featured.products limit: 6 %}
+        <div class="product-card">
+          <div class="product-image">
+            <a href="{{ product.url }}">
+              {% if product.featured_image %}
+                <img src="{{ product.featured_image | image_url: width: 300 }}" alt="{{ product.title }}">
+              {% endif %}
+            </a>
+          </div>
+          <h3><a href="{{ product.url }}">{{ product.title }}</a></h3>
+          <p class="price">{{ product.price | money }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>
